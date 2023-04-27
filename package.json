@@ -1,0 +1,16 @@
+{
+  "name": "ecommerce-solutions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd admin && npm run dev && cd ..\" \"cd api && npm run dev && cd ..\" \"cd store && npm run dev && cd ..\"",
+    "build": "concurrently \"cd admin && npm run build && cd ..\" \"cd api && npm run build && cd ..\" \"cd store && npm run build && cd ..\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

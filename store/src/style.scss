@@ -1,0 +1,210 @@
+$primary: rgb(15, 15, 15);
+$secondary: brown;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+.header__section {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.header__navbar__logo img {
+  height: 70px;
+  width: 70px;
+}
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+.header__entries {
+  display: flex;
+  align-items: center;
+}
+.header__navbar__link__wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header__navbar__link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  margin: 0px 12px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+.header__navbar__link:hover {
+  background-color: rgb(21, 22, 22);
+  color: rgb(221, 215, 215);
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+.header__navbar__cart__logo__wraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__navbar__cart__logo {
+  margin: 12px;
+}
+.header__menu {
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+
+.main__header {
+  background-color: rgb(107, 104, 104);
+}
+.landing__main__banner {
+  width: 100%;
+}
+.landing__main__banner__img {
+  width: 100%;
+  position: relative;
+}
+.landing__main__banner__img img {
+  width: 100%;
+  height: 500px;
+  object-fit: inherit;
+}
+.landing__main__banner__img__text__wraper {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 200px;
+}
+.landing__main__banner__text__container {
+  width: 600px;
+  background-color: rgb(75, 74, 74);
+  opacity: 0.9;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  margin: 1em;
+}
+.landing__main__banner__img__text__heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  padding: 0.5em;
+}
+
+.landing__main__banner__img__text__detail {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+.landing__main__banner__img__text__btn__link {
+  margin-top: 20px;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 12px 0px;
+  color: black;
+  background-color: rgb(230, 232, 233);
+  padding: 8px 12px;
+  transition: 0.3s ease-in-out;
+}
+.landing__main__banner__img__text__btn__link:hover {
+  background-color: rgb(21, 22, 22);
+  color: rgb(252, 252, 252);
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  text-decoration: underline;
+}
+.card__main__container {
+  position: relative;
+}
+.card__main__wraper {
+  position: absolute;
+  width: 100%;
+  top: 90px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.card__main__wraper__img {
+  background-color: rgb(71, 82, 82);
+}
+.not__found {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  height: 200px;
+  padding: 0.5em;
+  border-top-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  margin-top: 4em;
+}
+//-------------------------------------------------------------------
+@media (max-width: 900px) {
+  .header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .header__entries {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 337px;
+    background-color: rgb(230, 232, 233);
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+  }
+}
+@media (max-width: 500px) {
+  .landing__main__banner__img__text__heading {
+    font-size: 20px;
+  }
+  .landing__main__banner__img__text__detail {
+    font-size: 12px;
+  }
+  .landing__main__banner__img__text__btn__link {
+    font-size: 12px;
+  }
+  .landing__main__banner__img__text__wraper {
+    top: 15%;
+  }
+  .landing__main__banner__img img {
+    height: 350px;
+  }
+}
