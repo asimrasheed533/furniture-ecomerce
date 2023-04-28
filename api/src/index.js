@@ -13,11 +13,17 @@ app.use(express.json());
 app.use(cors());
 
 // db config
-
+mongoose.connect(process.env.MONOGOURL, () => {
+  try {
+    console.log("db connected");
+  } catch (error) {
+    console.log(error);
+  }
+});
 // api routes
 app.get("/", (req, res) => {
   res.status(200).send("Hello World!");
 });
 
 // listen
-app.listen(port, () => console.log(`Listening on port http://localhost:${port}/`));
+app.listen(port, () => console.log(`api working:${port}/`));

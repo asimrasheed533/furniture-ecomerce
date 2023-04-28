@@ -177,11 +177,11 @@ body {
   flex-direction: column;
   max-width: 1366px;
   margin: 0 auto;
+  background-repeat: no-repeat;
 }
 .product__container__header__text__wraper {
   text-align: center;
   margin-top: 3em;
-  // background-image: url(../src/asstes/Vector.png);
 }
 .product__header__heading {
   font-size: 32px;
@@ -269,9 +269,11 @@ body {
 }
 .showrom__container__img {
   position: relative;
+  width: 80%;
 }
 .showrom__container__img img {
   height: 450px;
+  border-radius: 8px;
 }
 .showrom__container__content {
   width: 100%;
@@ -283,6 +285,7 @@ body {
   justify-content: center;
   background-color: #f9f9f9;
   border-radius: 8px;
+  margin-right: -25em;
 }
 .showrom__container__content__heading {
   font-size: 30px;
@@ -342,6 +345,12 @@ body {
 }
 //-------------------------------------------------------------------
 @media (max-width: 900px) {
+  .showrom__container__img {
+    width: none;
+  }
+  .showrom__container__content {
+    margin-right: 0em;
+  }
   .header__menu {
     display: flex;
     align-items: center;
