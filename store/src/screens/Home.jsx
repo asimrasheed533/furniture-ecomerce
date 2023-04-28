@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import banner from "../asstes/banner.png";
+import productimg from "../asstes/productimg.png";
+import showroom from "../asstes/showroom.png";
 
 export default function Home() {
   return (
@@ -30,6 +32,89 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="product__container">
+        <div className="product__container__header__text__wraper">
+          <div className="product__header__heading">Products</div>
+          <div className="product__header__sub__heading">
+            Lorem Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard
+            dummy Ipsum has been the industry's standard dummy text. Lorem
+            industry's standard dummy text text. Lorem industry's standard dummy
+            text
+          </div>
+        </div>
+        <div className="product__imgs__container">
+          <ProductCard
+            productimg={productimg}
+            heading="Kingdom Tower"
+            subheading="Wood Flooring"
+          />
+          <ProductCard
+            productimg={productimg}
+            heading="Dubai Mall"
+            subheading="Wood Flooring"
+          />
+          <ProductCard
+            productimg={productimg}
+            heading="Kingdom Tower"
+            subheading="Wood Flooring"
+          />
+          <ProductCard
+            productimg={productimg}
+            heading="Dubai Mall"
+            subheading="Wood Flooring"
+          />
+
+          <ProductCard
+            productimg={productimg}
+            heading="Kingdom Tower"
+            subheading="Wood Flooring"
+          />
+        </div>
+        <div className="product__see__more__btn">
+          <Link className="product__see__more__btn__link" to="/product">
+            See More
+          </Link>
+        </div>
+      </div>
+      <div className="showrom__container">
+        <div className="showrom__container__img">
+          <img src={showroom} alt="" />
+        </div>
+        <div className="showrom__container__content">
+          <div className="showrom__container__content__heading">
+            Our ShowRooms
+          </div>
+          <div className="showrom__container__content__sub__heading">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+            ipsa commodi totam corporis consequatur perspiciatis alias
+            voluptatem. Voluptatibus suscipit sit pariatur, recusandae soluta
+            omnis voluptatem illum, sequi repudiandae otam corporis consequatur
+            perspiciatis alias voluptatem. Voluptatibus suscipit sit pariatur,
+            recusandae soluta omnis voluptatem illum, sequi repudianda dicta
+            reprehenderit.
+          </div>
+          <div className="product__see__more__btn">
+            <Link className="product__see__more__btn__link" to="/product">
+              See More
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProductCard({ productimg, heading, subheading }) {
+  return (
+    <div className="product__wraper">
+      <div className="product__wraper__img">
+        <img src={productimg} alt="product" />
+      </div>
+      <div className="product__wraper__text">
+        <div className="product__wraper__text__heading">{heading}</div>
+        <div className="product__wraper__sub__heading">{subheading}</div>
       </div>
     </div>
   );
