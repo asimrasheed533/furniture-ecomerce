@@ -343,6 +343,13 @@ body {
   text-decoration: none;
   color: white;
 }
+.products__details__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0em;
+}
 //-------------------------------------------------------------------
 @media (max-width: 900px) {
   .showrom__container__img {

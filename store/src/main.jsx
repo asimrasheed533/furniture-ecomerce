@@ -8,6 +8,7 @@ import ReactDOM from "react-dom/client";
 import CategoryDetails from "./screens/CategoryDetails";
 import ProductDetails from "./screens/ProductDetails";
 import RootLayout from "./RootLayout";
+import Products from "./screens/Products";
 
 const router = createBrowserRouter([
   {
@@ -23,8 +24,12 @@ const router = createBrowserRouter([
         element: <CategoryDetails />,
       },
       {
-        path: "/product",
+        path: "/productDetails",
         element: <ProductDetails />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
       },
       // {
       //   path: "/about",
@@ -38,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <div className="not__found">chal ohy si sa url likh</div>,
+    element: <div className="not__found">404 Page Not Found</div>,
   },
 ]);
 

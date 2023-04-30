@@ -55,7 +55,7 @@ export default function Header() {
                 <Link className="header__navbar__link" to="/">
                   Services
                 </Link>
-                <Link className="header__navbar__link" to="/">
+                <Link className="header__navbar__link" to="/products">
                   Products
                 </Link>
                 <Link className="header__navbar__link" to="/">

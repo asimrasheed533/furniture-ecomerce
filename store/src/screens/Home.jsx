@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import banner from "../asstes/banner.png";
 import productimg from "../asstes/productimg.png";
 import showroom from "../asstes/showroom.png";
+import { ProductCard } from "../compounts/ProductCard";
 
 export default function Home() {
   return (
@@ -101,20 +102,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function ProductCard({ productimg, heading, subheading }) {
-  return (
-    <div className="product__wraper">
-      <div className="product__wraper__img">
-        <img src={productimg} alt="product" />
-      </div>
-      <div className="product__wraper__text">
-        <div className="product__wraper__text__heading">{heading}</div>
-        <div className="product__wraper__sub__heading">{subheading}</div>
       </div>
     </div>
   );
