@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import banner from "../asstes/banner.png";
 import productimg from "../asstes/productimg.png";
 import showroom from "../asstes/showroom.png";
+import tabel from "../asstes/tabel.png";
 import ProductCard from "../compounts/ProductCard";
+import SelectCatagorieCard from "../compounts/SelectCatagorieCard";
 
 export default function Home() {
   return (
@@ -107,6 +109,51 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="select__catagories__section">
+        <div className="select__catagories__section__heading">
+          BROWSE OUR CATEGORIES
+        </div>
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
+        <SelectCatagorieCard
+          tabel={tabel}
+          heading="TABEL"
+          subheading="230 products"
+        />
       </div>
       <div className="product__container">
         <div className="product__container__header__text__wraper">

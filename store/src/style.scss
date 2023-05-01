@@ -378,8 +378,96 @@ body {
   font-size: 16px;
   color: #636161;
 }
+.select__catagories__section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 0em;
+  flex-wrap: wrap;
+  max-width: 1166px;
+  margin: 0 auto;
+}
+.select__catagories__section__heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 12px;
+  position: relative;
+  color: $secondary;
+}
+.select__catagories__section__heading::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 32%;
+  background-color: #636161;
+  z-index: -1;
+  right: 0;
+}
+.select__catagories__section__heading::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 32%;
+  background-color: #636161;
+  z-index: -1;
+  left: 0;
+}
+.select__catagories__card {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.select__catagories__card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: 0.4s ease-in-out;
+  color: $secondary;
+}
+.select__catagories__card__img {
+  border-radius: 30px;
+}
+.select__catagories__card__img img {
+  height: 200px;
+  width: 200px;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  transition: 0.4s ease-in-out;
+}
+.select__catagories__card__img img:hover {
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  transition: 0.4s ease-in-out;
+}
+.select__catagories__card__text__heading {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px 0px;
+}
+.select__catagories__card__text__sub__heading {
+  font-size: 16px;
+  color: #636161;
+}
 //-------------------------------------------------------------------
 @media (max-width: 900px) {
+  .select__catagories__section__heading::after {
+    display: none;
+  }
+  .select__catagories__section__heading::before {
+    display: none;
+  }
   .showrom__container__img {
     width: none;
   }
