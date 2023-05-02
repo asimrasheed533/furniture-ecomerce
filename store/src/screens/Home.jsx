@@ -115,6 +115,7 @@ export default function Home() {
           BROWSE OUR CATEGORIES
         </div>
         <SelectCatagorieCard
+          link="/tabel"
           tabel={tabel}
           heading="TABEL"
           subheading="230 products"

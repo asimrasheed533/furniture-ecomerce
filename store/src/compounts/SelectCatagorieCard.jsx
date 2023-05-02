@@ -1,7 +1,13 @@
 import React from "react";
-export default function SelectCatagorieCard({ tabel, heading, subheading }) {
+import { Link } from "react-router-dom";
+export default function SelectCatagorieCard({
+  tabel,
+  heading,
+  subheading,
+  link,
+}) {
   return (
-    <div className="select__catagories__card">
+    <Link to={link} className="select__catagories__card">
       <div className="select__catagories__card__img">
         <img src={tabel} alt="select setegories" />
       </div>
@@ -11,6 +17,6 @@ export default function SelectCatagorieCard({ tabel, heading, subheading }) {
           {subheading}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

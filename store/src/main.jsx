@@ -1,14 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./style.scss";
-// import About from "./screens/About";
-// import Cart from "./screens/Cart";
 import Home from "./screens/Home";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import CategoryDetails from "./screens/CategoryDetails";
 import ProductDetails from "./screens/ProductDetails";
 import RootLayout from "./RootLayout";
 import Products from "./screens/Products";
+import TabelProducts from "./screens/TabelProducts";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +18,6 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/listing",
-        element: <CategoryDetails />,
-      },
-      {
         path: "/productDetails",
         element: <ProductDetails />,
       },
@@ -31,14 +25,10 @@ const router = createBrowserRouter([
         path: "/products",
         element: <Products />,
       },
-      // {
-      //   path: "/about",
-      //   element: <About />,
-      // },
-      // {
-      //   path: "/cart",
-      //   element: <Cart />,
-      // },
+      {
+        path: "/tabel",
+        element: <TabelProducts />,
+      },
     ],
   },
   {

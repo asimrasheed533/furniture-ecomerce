@@ -28,7 +28,11 @@ export default function Header() {
   }, []);
   return (
     <div className="header__section">
-      <div className="header__navbar">
+      <div
+        className={
+          isScroll ? "header__navbar header__navbar__active" : "header__navbar"
+        }
+      >
         <div className="header__navbar__logo">
           <img src={logofur} alt="logo" />
         </div>
