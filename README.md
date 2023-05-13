@@ -1,1 +1,1 @@
-# electromart
+# furniture-ecomerce
