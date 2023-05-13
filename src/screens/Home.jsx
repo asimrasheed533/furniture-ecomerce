@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import banner from "../asstes/banner.png";
-import productimg from "../asstes/productimg.png";
-import showroom from "../asstes/showroom.png";
-import tabel from "../asstes/tabel.png";
-import ProductCard from "../compounts/ProductCard";
-import SelectCatagorieCard from "../compounts/SelectCatagorieCard";
+import { Link } from "wouter";
+import banner from "../assets/banner.png";
+import productimg from "../assets/productimg.png";
+import showroom from "../assets/showroom.png";
+import tabel from "../assets/tabel.png";
+import ProductCard from "../components/ProductCard";
+import SelectCatagorieCard from "../components/SelectCatagorieCard";
 
 export default function Home() {
   return (

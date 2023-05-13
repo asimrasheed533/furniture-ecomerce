@@ -1,9 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
-import logofur from "../asstes/logofur.png";
-import champ from "../asstes/champ.png";
+import { Link } from "wouter";
+import logofur from "../assets/logofur.png";
 import ClickAwayListener from "react-click-away-listener";
-import Avatar from "@mui/material/Avatar";
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
@@ -88,9 +86,6 @@ export default function Header() {
                   stroke-miterlimit="10"
                 />
               </svg>
-            </div>
-            <div className="header__navbar__cart__logo">
-              <Avatar alt="Remy Sharp" src={champ} />
             </div>
           </div>
         </div>
