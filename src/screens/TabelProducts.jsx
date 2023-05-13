@@ -1,7 +1,7 @@
 import React from "react";
-import banner from "../asstes/banner.png";
-import bannertwo from "../asstes/bannertwo.png";
-import productimg from "../asstes/productimg.png";
+import banner from "../assets/banner.png";
+import bannertwo from "../assets/bannertwo.png";
+import productimg from "../assets/productimg.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper";
 import "swiper/css";
@@ -9,8 +9,28 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import ProductCard from "../compounts/ProductCard";
-export default function Products() {
+export default function TabelProducts() {
   const productslist = [
+    {
+      img: productimg,
+      heading: "Tabel Tower",
+      subheading: "Wood Flooring",
+    },
+    {
+      img: productimg,
+      heading: "Tabel Tower",
+      subheading: "Wood Flooring",
+    },
+    {
+      img: productimg,
+      heading: "Kingdom Tower",
+      subheading: "Wood Flooring",
+    },
+    {
+      img: productimg,
+      heading: "Kingdom Tower",
+      subheading: "Wood Flooring",
+    },
     {
       img: productimg,
       heading: "Kingdom Tower",
@@ -52,6 +72,14 @@ export default function Products() {
               <img src={bannertwo} alt="products" />
             </SwiperSlide>
           </Swiper>
+        </div>
+        <div className="tabel__products__text__container">
+          {/* <div className="tabel__products__text__container__heading">
+            Tabel Produts
+          </div> */}
+          <div className="select__catagories__section__heading">
+            Tabel Products
+          </div>
         </div>
 
         <div className="products__details__container">

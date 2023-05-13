@@ -3,7 +3,6 @@ import "./style.scss";
 import Home from "./screens/Home";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ProductDetails from "./screens/ProductDetails";
 import RootLayout from "./RootLayout";
 import Products from "./screens/Products";
 import TabelProducts from "./screens/TabelProducts";
@@ -17,10 +16,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/productDetails",
-        element: <ProductDetails />,
-      },
+
       {
         path: "/products",
         element: <Products />,
