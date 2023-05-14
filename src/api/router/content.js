@@ -53,8 +53,7 @@ router.put("/:id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   try {
-    const content = await Content.findById(req.params.id);
-    await content.delete();
+    const content = await Content.findByIdAndDelete(req.params.id);
     res.send(content);
   } catch (err) {
     console.log(err);

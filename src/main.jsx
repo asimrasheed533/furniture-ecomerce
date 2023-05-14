@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import RootLayout from "./RootLayout";
 import Products from "./screens/Products";
 import TabelProducts from "./screens/TabelProducts";
+import Details from "./screens/Details";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-
+      {
+        path: "/details",
+        element: <Details />,
+      },
       {
         path: "/products",
         element: <Products />,

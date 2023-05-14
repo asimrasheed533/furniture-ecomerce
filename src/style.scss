@@ -480,6 +480,129 @@ body {
   font-size: 16px;
   color: #636161;
 }
+.collection__details {
+  display: flex;
+  flex-direction: column;
+  max-width: 1366px;
+  padding: 4em 2em;
+  width: 100%;
+  margin: 0 auto;
+}
+.collection__details__back__button {
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid $secondary;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 4em;
+}
+.collection__details__back__button svg {
+  margin-right: 0.5em;
+}
+.collection__details__back__button:hover {
+  transition: 300ms ease-in-out;
+  background-color: $secondary;
+  color: white;
+}
+.collection__details__main {
+  display: flex;
+}
+.collection__details__main__left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.collection__details__main__left__img__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+.collection__details__main__left__img {
+  max-width: 70%;
+  max-height: 1000px;
+  min-height: 500px;
+}
+.collection__details__main__right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.collection__details__main__right__heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0.1em;
+  color: $secondary;
+}
+.collection__details__main__right__sub__heading {
+  font-size: 16px;
+  margin-bottom: 1.5em;
+  font-weight: 600;
+  color: $secondary;
+}
+.collection__details__main__right__sub__heading__reverse {
+  font-size: 16px;
+  margin-bottom: 0.5em;
+  color: $secondary;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.collection__details__main__right__entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  color: #525252;
+}
+.collection__details__main__right__entry__price {
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 0.5em;
+}
+.collection__details__main__right__entry__content {
+  margin-left: 0.3em;
+}
+.collection__details__main__right__button {
+  height: 45px;
+  background-color: $secondary;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 1em;
+}
+.collection__details__main__right__button:hover {
+  transition: 300ms ease-in-out;
+  background-color: black;
+}
+.collection__details__main__right__info {
+  display: flex;
+  flex-direction: column;
+}
+.collection__details__main__right__info__entry {
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.collection__details__main__right__info__entry::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1.5em;
+  transform: translateY(-50%);
+  width: 0.5em;
+  height: 0.5em;
+  background-color: $secondary;
+  border-radius: 50%;
+}
 //-------------------------------------------------------------------
 @media (max-width: 900px) {
   .select__catagories__section__heading::after {
