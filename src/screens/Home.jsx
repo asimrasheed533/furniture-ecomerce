@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import banner from "../assets/banner.png";
 import productimg from "../assets/productimg.png";
@@ -6,8 +6,15 @@ import showroom from "../assets/showroom.png";
 import tabel from "../assets/tabel.png";
 import ProductCard from "../compounts/ProductCard";
 import SelectCatagorieCard from "../compounts/SelectCatagorieCard";
-
+import axios from "axios";
+// import { use } from "express/lib/router";
 export default function Home() {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    axios.get(`${window.location.origin}/api/categories`).then((res) => {
+      setCategories(res.data);
+    });
+  }, []);
   return (
     <div className="main__header">
       <div className="landing__main__banner">
@@ -112,10 +119,26 @@ export default function Home() {
       </div>
       <div className="select__catagories__section">
         <div className="select__catagories__section__heading">
-          BROWSE OUR CATEGORIES
+          OUR CATEGORIES
         </div>
-        <SelectCatagorieCard
-          link="/tabel"
+        {/* {categories.map((category) => {
+          <SelectCatagorieCard
+            key={category._id}
+            link={`/products/${categories._id}`}
+            img={category.image}
+            heading={category.name}
+            // subheading={category.subheading}
+          />;
+        })} */}
+        {categories.map((category) => (
+          <SelectCatagorieCard
+            key={category._id}
+            link={`/products/${category._id}`}
+            img={category.img}
+            heading={category.name}
+          />
+        ))}
+        {/* <SelectCatagorieCard
           tabel={tabel}
           heading="TABEL"
           subheading="230 products"
@@ -124,37 +147,7 @@ export default function Home() {
           tabel={tabel}
           heading="TABEL"
           subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
+        /> */}
       </div>
       <div className="product__container">
         <div className="product__container__header__text__wraper">

@@ -5,6 +5,7 @@ import { uploadImage } from "../main";
 const schema = new mongoose.Schema({
   name: String,
   img: String,
+  subheading: String,
 });
 
 const Category = mongoose.model("Category", schema);
