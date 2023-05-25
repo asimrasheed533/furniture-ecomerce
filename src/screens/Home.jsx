@@ -121,15 +121,7 @@ export default function Home() {
         <div className="select__catagories__section__heading">
           OUR CATEGORIES
         </div>
-        {/* {categories.map((category) => {
-          <SelectCatagorieCard
-            key={category._id}
-            link={`/products/${categories._id}`}
-            img={category.image}
-            heading={category.name}
-            // subheading={category.subheading}
-          />;
-        })} */}
+
         {categories.map((category) => (
           <SelectCatagorieCard
             key={category._id}
@@ -138,16 +130,6 @@ export default function Home() {
             heading={category.name}
           />
         ))}
-        {/* <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        />
-        <SelectCatagorieCard
-          tabel={tabel}
-          heading="TABEL"
-          subheading="230 products"
-        /> */}
       </div>
       <div className="product__container">
         <div className="product__container__header__text__wraper">
