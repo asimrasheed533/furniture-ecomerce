@@ -125,8 +125,8 @@ export default function Home() {
         {categories.map((category) => (
           <SelectCatagorieCard
             key={category._id}
-            link={`/products/${category._id}`}
             img={category.img}
+            link="/products"
             heading={category.name}
           />
         ))}
