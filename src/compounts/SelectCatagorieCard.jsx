@@ -7,7 +7,13 @@ export default function SelectCatagorieCard({
   link,
 }) {
   return (
-    <Link to={link} className="select__catagories__card">
+    <Link
+      onClick={() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }}
+      to={link}
+      className="select__catagories__card"
+    >
       <div className="select__catagories__card__img">
         <img src={img} alt="select setegories" />
       </div>

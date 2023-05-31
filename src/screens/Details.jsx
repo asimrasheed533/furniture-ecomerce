@@ -1,29 +1,16 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link, useLocation } from "react-router-dom";
 
-import { Pagination } from "swiper";
-import productimg from "../assets/productimg.png";
-import { useLocation } from "react-router-dom";
+import { cartAtom } from "../global";
+import { useAtom } from "jotai";
 
 export default function Details() {
-  const description = [
-    "100% cotton",
-    "Made in China",
-    "Machine wash",
-    "Unlined",
-    "Midweight knit fabric with banded hem",
-    "Revolve Style No. 525A-WD68",
-    "Manufacturer Style No. 110008690",
-  ];
-  const [, navigate] = useLocation();
+  const { state } = useLocation();
+  const product = state.product;
+  const [cart, setCart] = useAtom(cartAtom);
+
   return (
     <div className="collection__details">
-      <button
-        className="collection__details__back__button"
-        onClick={() => {
-          navigate(-1);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      >
+      <Link to="/products" className="collection__details__back__button">
         <svg
           width="24"
           height="24"
@@ -36,86 +23,75 @@ export default function Details() {
             fill="currentColor"
           />
         </svg>
-        Add to Cart
-      </button>
+        Back
+      </Link>
       <div className="collection__details__main">
         <div className="collection__details__main__left">
-          <Swiper slidesPerView={1} modules={[Pagination]} pagination>
-            <SwiperSlide>
-              <div className="collection__details__main__left__img__wrapper">
-                <img
-                  src={productimg}
-                  alt="product"
-                  className="collection__details__main__left__img"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="collection__details__main__left__img__wrapper">
-                <img
-                  src={refr}
-                  alt="product"
-                  className="collection__details__main__left__img"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="collection__details__main__left__img__wrapper">
-                <img
-                  src={productimg}
-                  alt="product"
-                  className="collection__details__main__left__img"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="collection__details__main__left__img__wrapper">
-                <img
-                  src={productimg}
-                  alt="product"
-                  className="collection__details__main__left__img"
-                />
-              </div>
-            </SwiperSlide>
-          </Swiper>
+          <div className="collection__details__main__left__img__wrapper">
+            <img
+              src={product?.img}
+              alt={product?.name}
+              className="collection__details__main__left__img"
+            />
+          </div>
         </div>
         <div className="collection__details__main__right">
           <div className="collection__details__main__right__heading">
-            Faux Fox Fur Jacket
+            {product?.name}
           </div>
           <div className="collection__details__main__right__sub__heading">
-            Brand name here
-          </div>
-          <div className="collection__details__main__right__entry">
-            Available to try in :
+            {product?.category}
           </div>
           <div className="collection__details__main__right__entry">
             Price if purchased :
             <div className="collection__details__main__right__entry__price">
-              $719
+              ${product?.price}
             </div>
           </div>
           <div className="collection__details__main__right__entry">
-            Payment due today :
+            Rating;
             <div className="collection__details__main__right__entry__content">
-              none
+              {Array(product?.rating)
+                .fill()
+                .map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
             </div>
           </div>
-          <button className="collection__details__main__right__button">
-            Book in Small and Medium
-          </button>
+          {product?.stock > 0 ? (
+            cart.find((item) => item._id === product._id) ? (
+              <button
+                className="collection__details__main__right__button"
+                onClick={() => {
+                  setCart(cart.filter((item) => item._id !== product._id));
+                }}
+              >
+                Remove from cart
+              </button>
+            ) : (
+              <button
+                className="collection__details__main__right__button"
+                onClick={() => {
+                  setCart([...cart, product]);
+                }}
+              >
+                Add to cart
+              </button>
+            )
+          ) : (
+            <button
+              className="collection__details__main__right__button"
+              disabled
+            >
+              Out of stock
+            </button>
+          )}
+
           <div className="collection__details__main__right__sub__heading__reverse">
             Description & Material
           </div>
           <div className="collection__details__main__right__info">
-            {description.map((item, index) => (
-              <div
-                className="collection__details__main__right__info__entry"
-                key={index}
-              >
-                {item}
-              </div>
-            ))}
+            {product?.description}
           </div>
         </div>
       </div>
