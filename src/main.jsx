@@ -4,7 +4,7 @@ import { useLayoutEffect, useState } from "react";
 import Cart from "./screens/Cart";
 import Details from "./screens/Details";
 import Footer from "./compounts/Footer";
-// import Header from "./components/Header";
+import Header from "./compounts/Header";
 import Home from "./screens/Home";
 import Products from "./screens/Products";
 import ReactDOM from "react-dom/client";
@@ -23,7 +23,7 @@ function App({}) {
 
   return (
     <BrowserRouter>
-      {/* <Header products={products} /> */}
+      <Header products={products} />
       <Routes>
         <Route path="/" element={<Home products={products} />} />
         <Route path="/products" element={<Products products={products} />} />

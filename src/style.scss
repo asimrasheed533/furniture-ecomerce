@@ -1,5 +1,5 @@
 $primary: rgb(15, 15, 15);
-$secondary: brown;
+$secondary: rgb(48 106 237 / 80%);
 *,
 *::before,
 *::after {
@@ -13,10 +13,91 @@ body {
   overflow-x: hidden;
   font-size: 16px;
 }
+.header__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.header__content__logo img {
+  height: 70px;
+}
+.header__content__search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0em 1em;
+}
+.header__content__search__bar {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header__content__search__bar__input {
+  flex: 1;
+  height: 40px;
+  min-width: px;
+  border: none;
+  border-bottom: 1px solid $secondary;
+  padding: 0.5em;
+  outline: none;
+  font-size: 16px;
+}
+.header__content__search__bar__input:focus {
+  border-bottom: 0.3px solid $primary;
+}
+.header__content__search__bar__button {
+  height: 40px;
+  background-color: $secondary;
+  border: none;
+  border-radius: 5px;
+  margin-left: 0.5em;
+  cursor: pointer;
+  color: white;
+  padding: 0em 1em;
+}
+.header__content__search__selection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 10%;
+  overflow-y: auto;
+  max-height: 500px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #bdb9b9;
+  border-radius: 5px;
+  padding: 0.5em;
+  z-index: 999999;
+}
+.header__content__search__selection__entry {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+.header__content__search__selection__entry:hover {
+  background-color: #e2e2e2;
+  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
 .header__content__button {
   width: 40px;
   height: 40px;
-  background-color: #a80000;
+  background-color: black;
   color: white;
   border: none;
   border-radius: 5px;
@@ -36,7 +117,7 @@ body {
   right: -10px;
   width: 25px;
   height: 25px;
-  background-color: #a80000;
+  background-color: $secondary;
   border: 1px solid white;
   color: white;
   border-radius: 50%;
