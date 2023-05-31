@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 
 export default function Products({ products }) {
   const { state } = useLocation();
-  const priceRanges = [15000, 20000, 30000, 40000, 50000];
+  const priceRanges = [5000, 15000, 30000, 40000, 50000];
   const [price, setprice] = useState("");
 
   const [filterlist, setFilterlist] = useState(products);
