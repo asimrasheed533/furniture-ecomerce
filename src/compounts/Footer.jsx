@@ -9,7 +9,6 @@ export default function Footer() {
           <div className="footer__logo">
             <img src={logo} alt="Footer" />
           </div>
-          <div className="footer__icon">icon</div>
         </div>
         <div className="footer__container__col">
           <div className="footer__row__heading">Products</div>

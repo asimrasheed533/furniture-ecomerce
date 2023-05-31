@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import banner from "../assets/banner.png";
 import productimg from "../assets/productimg.png";
 import showroom from "../assets/showroom.png";
-import tabel from "../assets/tabel.png";
 import ProductCard from "../compounts/ProductCard";
 import SelectCatagorieCard from "../compounts/SelectCatagorieCard";
 import axios from "axios";
-// import { use } from "express/lib/router";
-export default function Home() {
+
+export default function Home({ products }) {
+  console.log(products);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     axios.get(`${window.location.origin}/api/categories`).then((res) => {
@@ -143,37 +143,28 @@ export default function Home() {
           </div>
         </div>
         <div className="product__imgs__container">
+          {products
+            .filter((product) => product.isFeatured === true)
+            .map((product, index) => {
+              return (
+                <ProductCard
+                  key={index}
+                  img={product.img}
+                  heading={product.name}
+                  price={product.price}
+                />
+              );
+            })}
           <ProductCard
-            productimg={productimg}
+            img={productimg}
             heading="Kingdom Tower"
             subheading="Wood Flooring"
           />
           <ProductCard
-            productimg={productimg}
+            img={productimg}
             heading="Dubai Mall"
             subheading="Wood Flooring"
           />
-          <ProductCard
-            productimg={productimg}
-            heading="Kingdom Tower"
-            subheading="Wood Flooring"
-          />
-          <ProductCard
-            productimg={productimg}
-            heading="Dubai Mall"
-            subheading="Wood Flooring"
-          />
-
-          <ProductCard
-            productimg={productimg}
-            heading="Kingdom Tower"
-            subheading="Wood Flooring"
-          />
-        </div>
-        <div className="product__see__more__btn">
-          <Link className="product__see__more__btn__link" to="/product">
-            See More
-          </Link>
         </div>
       </div>
       <div className="showrom__container">
