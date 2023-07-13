@@ -22,16 +22,28 @@ export default function Cart() {
             {cart.length === 0 ? (
               <div>No Items in Cart</div>
             ) : (
-              cart.map((item) => (
-                <CartItem
-                  img={item.img}
-                  name={item.name}
-                  price={item.price}
-                  onRemove={() => {
-                    setCart((prev) => prev.filter((i) => i._id !== item._id));
-                  }}
-                />
-              ))
+              cart.map((item) => {
+                console.log(item);
+                return (
+                  <div className="cart__container__wraper__card">
+                    <div className="cart__container__wraper__card__img">
+                      <img
+                        // src={import.meta.env.VITE_CLOUDNAIRY_API_URL + item.img}
+                        src={item.img}
+                        alt={item.name}
+                      />
+                    </div>
+                    <div className="cart__container__wraper__card__text">
+                      <div className="cart__container__wraper__card__text__heading">
+                        {item.name}
+                      </div>
+                      <div className="cart__container__wraper__card__price">
+                        Rs:/{item.price}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })
             )}
             {cart.length !== 0 && (
               <div className="clear__cart__btn">

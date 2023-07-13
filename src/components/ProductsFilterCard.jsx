@@ -16,7 +16,9 @@ export default function ProductsFilterCard({ product }) {
     >
       <div className="products__filter__card__img">
         <img
-          src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
+          // src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
+          img
+          src={product?.img}
           alt="products"
         />
       </div>

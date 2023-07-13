@@ -29,6 +29,7 @@ export default function Details() {
         <div className="collection__details__main__left">
           <div className="collection__details__main__left__img__wrapper">
             <img
+              // src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
               src={product?.img}
               alt={product?.name}
               className="collection__details__main__left__img"

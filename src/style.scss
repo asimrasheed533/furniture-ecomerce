@@ -807,13 +807,13 @@ body {
 }
 .products__filter__card__img img {
   height: 250px;
-  width: 250px;
+  width: 350px;
   border-radius: 6px;
   transition: 0.6s ease-in-out;
 }
 .products__filter__card__img img:hover {
   transition: 0.3s ease-in-out;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .products__filter__card__row {
   width: 100%;
@@ -822,8 +822,8 @@ body {
   justify-content: space-between;
 }
 .products__filter__card__row__heading {
-  width: 96%;
-  font-size: 16px;
+  width: 100%;
+  font-size: 20px;
   font-weight: 500;
   padding: 5px 0px;
   color: #636161;
@@ -921,7 +921,7 @@ body {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 160px;
   margin: 0em 1em;
   background-color: #f0f0f2;
