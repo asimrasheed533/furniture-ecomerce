@@ -5,13 +5,13 @@ import productimg from "../assets/productimg.png";
 import showroom from "../assets/showroom.png";
 import ProductCard from "../compounts/ProductCard";
 import SelectCatagorieCard from "../compounts/SelectCatagorieCard";
-import axios from "axios";
+import axios from "../utils/axios";
 
 export default function Home({ products }) {
   console.log(products);
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    axios.get(`${window.location.origin}/api/categories`).then((res) => {
+    axios.get(`categories`).then((res) => {
       setCategories(res.data);
     });
   }, []);
@@ -125,9 +125,10 @@ export default function Home({ products }) {
         {categories.map((category) => (
           <SelectCatagorieCard
             key={category._id}
-            img={category.img}
+            img={import.meta.env.VITE_CLOUDNAIRY_API_URL + category.img}
             link="/products"
             heading={category.name}
+            _id={category._id}
           />
         ))}
       </div>
