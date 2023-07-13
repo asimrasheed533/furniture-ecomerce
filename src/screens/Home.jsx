@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import banner from "../assets/banner.png";
 import productimg from "../assets/productimg.png";
 import showroom from "../assets/showroom.png";
-import ProductCard from "../compounts/ProductCard";
-import SelectCatagorieCard from "../compounts/SelectCatagorieCard";
+import ProductCard from "../components/ProductCard";
+import SelectCatagorieCard from "../components/SelectCatagorieCard";
 import axios from "../utils/axios";
 
 export default function Home({ products }) {
@@ -119,7 +119,7 @@ export default function Home({ products }) {
       </div>
       <div className="select__catagories__section">
         <div className="select__catagories__section__heading">
-          OUR CATEGORIES
+          OUR Furniture CATEGORIES
         </div>
 
         {categories.map((category) => (

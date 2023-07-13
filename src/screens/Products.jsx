@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import ProductsFilterCard from "../compounts/ProductsFilterCard";
+import ProductsFilterCard from "../components/ProductsFilterCard";
 import { useLocation } from "react-router-dom";
 
 export default function Products({ products }) {
