@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Search from "./Search";
+// import Search from "./Search";
 import { cartAtom } from "../global";
 import logo from "../assets/logo.png";
 import { useAtom } from "jotai";
@@ -13,7 +13,7 @@ export default function Header({ products }) {
         <Link to="/" className="header__content__logo">
           <img src={logo} alt="logo" className="header__content__logo__img" />
         </Link>
-        <Search list={products} />
+        {/* <Search list={products} /> */}
         <Link to="/cart" className="header__content__button">
           <div className="header__content__button__badge">{cart?.length}</div>
           <svg width="30" height="30" viewBox="0 0 20 19" fill="currentColor">
