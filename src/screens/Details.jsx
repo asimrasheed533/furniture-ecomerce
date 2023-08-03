@@ -10,7 +10,7 @@ export default function Details() {
 
   return (
     <div className="collection__details">
-      <Link to="/products" className="collection__details__back__button">
+      <Link to="/" className="collection__details__back__button">
         <svg
           width="24"
           height="24"
@@ -29,8 +29,7 @@ export default function Details() {
         <div className="collection__details__main__left">
           <div className="collection__details__main__left__img__wrapper">
             <img
-              // src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
-              src={product?.img}
+              src={import.meta.env.VITE_CLOUDNAIRY_API_URL + product?.img}
               alt={product?.name}
               className="collection__details__main__left__img"
             />

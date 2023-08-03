@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { cartAtom } from "../global";
 import { useAtom } from "jotai";
-// import aprod from "../assets/aprod.png";
 
 export default function Cart() {
   const [cart, setCart] = useAtom(cartAtom);
@@ -10,10 +9,7 @@ export default function Cart() {
     <div className="cart__container">
       <div className="cart__container__header">
         <div className="cart__container__header__heading">
-          <Link
-            to="/products"
-            className="cart__container__header__heading__text"
-          >
+          <Link to="/" className="cart__container__header__heading__text">
             Back to shop
           </Link>
         </div>
@@ -28,8 +24,7 @@ export default function Cart() {
                   <div className="cart__container__wraper__card">
                     <div className="cart__container__wraper__card__img">
                       <img
-                        // src={import.meta.env.VITE_CLOUDNAIRY_API_URL + item.img}
-                        src={item.img}
+                        src={import.meta.env.VITE_CLOUDNAIRY_API_URL + item.img}
                         alt={item.name}
                       />
                     </div>
