@@ -23,9 +23,12 @@ export function App({}) {
       <Header products={products} />
       <Routes>
         <Route path="/" element={<Home products={products} />} />
-        <Route path="/products" element={<Products products={products} />} />
+        <Route
+          path="/products/:id"
+          element={<Products products={products} />}
+        />
         <Route path="/details/:id" element={<Details />} />
-    
+
         <Route path="/cart" element={<Cart />} />
         <Route
           path="*"

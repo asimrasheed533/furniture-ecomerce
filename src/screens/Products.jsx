@@ -3,10 +3,14 @@ import { useEffect, useState } from "react";
 import ProductsFilterCard from "../components/ProductsFilterCard";
 import { useLocation } from "react-router-dom";
 
-export default function Products({ products }) {
+export default function Products({ products: unFillteredProducts }) {
+  const category = location.pathname.split("/").at(-1);
   const { state } = useLocation();
   const priceRanges = [5000, 15000, 30000, 40000, 50000];
-  const [price, setprice] = useState("");
+  const [price, setPrice] = useState("");
+  const products = unFillteredProducts.filter(
+    (product) => product.category === category
+  );
 
   const [filterlist, setFilterlist] = useState(products);
 
@@ -35,19 +39,10 @@ export default function Products({ products }) {
         <div className="filter__products__col">
           <div className="filter__products__row">
             <div className="filter__products__row__button__wraper">
-              <button
-                onClick={() => {
-                  setprice("");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-                className="filter__products__row__button"
-              >
-                All
-              </button>
               {priceRanges.map((price) => (
                 <button
                   onClick={() => {
-                    setprice(price);
+                    setPrice(price);
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                   className="filter__products__row__button"
