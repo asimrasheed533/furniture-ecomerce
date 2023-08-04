@@ -29,6 +29,7 @@ export default function ProductsFilterCard({ product }) {
         <div className="products__filter__card__row__entry">
           {product.price}
         </div>
+        <div className="products__filter__card__row__entry">color : black</div>
         <div className="products__filter__card__row__entry__rating">
           {Array(product.rating)
             .fill()
