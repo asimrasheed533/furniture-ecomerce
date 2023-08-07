@@ -54,33 +54,33 @@ export default function Cart() {
             )}
           </div>
           <div className="cart__container__user__detail__wraper">
-            <div className="cart__container__user__detail__wraper__card">
+            <form className="cart__container__user__detail__wraper__card">
               <div className="cart__container__user__detail__wraper__card__heading">
                 Add Delivery Information
               </div>
               <div className="cart__container__user__detail__wraper__card__input">
-                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Enter Name" />
               </div>
               <div className="cart__container__user__detail__wraper__card__input">
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Enter Email" />
               </div>
               <div className="cart__container__user__detail__wraper__card__input">
                 <input type="tel" placeholder="Phone" />
               </div>
 
               <div className="cart__container__user__detail__wraper__card__input">
-                <input type="text" placeholder="Address" />
+                <input type="text" placeholder="Enter Current Address" />
               </div>
               <div className="cart__container__user__detail__wraper__card__input">
-                <input type="text" placeholder="City" />
+                <input type="number" placeholder="Enter Card Number" />
               </div>
               <div className="cart__container__user__detail__wraper__card__input">
-                <input type="text" placeholder="State" />
+                <input type="password" placeholder="Enter Cvv" />
               </div>
-              <div className="cart__container__user__detail__wraper__card__input">
-                <input type="text" placeholder="Zip" />
+              <div className="next__btn">
+                <button>Pay Now</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
