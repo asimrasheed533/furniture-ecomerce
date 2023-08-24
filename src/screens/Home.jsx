@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import banner from "../assets/banner.png";
 import productimg from "../assets/productimg.png";
+import fur from "../assets/fur.jpg";
 import showroom from "../assets/showroom.png";
 import ProductCard from "../components/ProductCard";
 import SelectCatagorieCard from "../components/SelectCatagorieCard";
@@ -157,7 +158,7 @@ export default function Home({ products }) {
               );
             })}
           <ProductCard
-            img={productimg}
+            img={fur}
             heading="Kingdom Tower"
             subheading="Wood Flooring"
           />

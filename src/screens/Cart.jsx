@@ -28,11 +28,12 @@ export default function Cart() {
     if (name === "") {
       setNameError("Name is required");
     }
-    if (email === "") {
-      setEmailError("Email is required");
-    }
+    
     if (address === "") {
       setAddressError("Address is required");
+    }
+    if (email === "") {
+      setEmailError("Email is required");
     }
     if (phone === "") {
       setPhoneError("Phone No is required");

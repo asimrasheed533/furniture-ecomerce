@@ -54,7 +54,7 @@ export default function Details() {
               {Array(product?.rating)
                 .fill()
                 .map((_, i) => (
-                  <span key={i}>⭐</span>
+                  <span key={i}>⭐⭐⭐</span>
                 ))}
             </div>
           </div>

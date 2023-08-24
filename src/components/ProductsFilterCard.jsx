@@ -34,7 +34,7 @@ export default function ProductsFilterCard({ product }) {
           {Array(product.rating)
             .fill()
             .map((_, i) => (
-              <Fragment key={i}>⭐</Fragment>
+              <Fragment key={i}>⭐⭐⭐</Fragment>
             ))}
         </div>
       </div>
